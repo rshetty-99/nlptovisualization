@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 47 100% 92%;
+    --foreground: 0 0% 0%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    
+    --primary: 330 100% 71%;
+    --primary-foreground: 0 0% 0%;
+    
+    --secondary: 47 100% 92%;
+    --secondary-foreground: 0 0% 0%;
+    
+    --muted: 330 100% 71%;
+    --muted-foreground: 0 0% 45%;
+    
+    --accent: 108 100% 54%;
+    --accent-foreground: 0 0% 0%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 330 100% 71%;
+    --input: 330 100% 71%;
+    --ring: 108 100% 54%;
+    
+    --radius: 1rem;
+  }
+ 
+  .dark {
+    --background: 262 83% 58%;
+    --foreground: 0 0% 100%;
+    
+    --card: 262 83% 58%;
+    --card-foreground: 0 0% 100%;
+    
+    --popover: 262 83% 58%;
+    --popover-foreground: 0 0% 100%;
+    
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 230 91% 58%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 230 91% 58%;
+    --muted-foreground: 215 20.2% 65.1%;
+    
+    --accent: 108 100% 54%;
+    --accent-foreground: 0 0% 0%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 230 91% 58%;
+    --input: 230 91% 58%;
+    --ring: 108 100% 54%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply transition-colors duration-300;
+  }
+  
+  /* Light mode gradient background */
+  :root body {
+    background: linear-gradient(135deg, #FFF4D8 0%, #FFB8D9 50%, #FF69B4 100%);
+    background-attachment: fixed;
+  }
+  
+  /* Dark mode gradient background - Leonardo.AI colors */
+  .dark body {
+    background: linear-gradient(135deg, #8B31FF 0%, #FF4B6C 100%);
+    background-attachment: fixed;
+  }
+}
+
+/* Custom scrollbar for dark mode */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
